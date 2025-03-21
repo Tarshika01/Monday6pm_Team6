@@ -1,4 +1,4 @@
-package org.example;
+package org.fit5171.monash;
 
 import java.sql.Timestamp;
 import java.util.Calendar;

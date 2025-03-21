@@ -1,4 +1,4 @@
-package org.example;
+package org.fit5171.monash;
 
 public class Airplane
 {

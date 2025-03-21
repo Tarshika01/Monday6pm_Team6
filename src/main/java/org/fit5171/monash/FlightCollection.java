@@ -1,30 +1,30 @@
-package org.example;
+package org.fit5171.monash;
 
 import java.util.ArrayList;
 
 public class FlightCollection {
 
-    public static ArrayList<org.example.Flight> flights;
+    public static ArrayList<Flight> flights;
 
-    public static ArrayList<org.example.Flight> getFlights() {
+    public static ArrayList<Flight> getFlights() {
         return flights;
     }
 
-    public static void addFlights(ArrayList<org.example.Flight> flights) {
+    public static void addFlights(ArrayList<Flight> flights) {
         FlightCollection.flights.addAll(flights);
     }
 
-    public static org.example.Flight getFlightInfo(String city1, String city2) {
+    public static Flight getFlightInfo(String city1, String city2) {
         //display the flights where there is a direct flight from city 1 to city2
         return null;
     }
 
-    public static org.example.Flight getFlightInfo(String city) {
+    public static Flight getFlightInfo(String city) {
         //SELECT a flight where depart_to = city
         return null;
 
     }
-    public static org.example.Flight getFlightInfo(int flight_id) {
+    public static Flight getFlightInfo(int flight_id) {
         //SELECT a flight with a particular flight id
         return null;
 

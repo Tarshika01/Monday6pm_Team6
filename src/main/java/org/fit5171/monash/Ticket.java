@@ -1,14 +1,14 @@
-package org.example;
+package org.fit5171.monash;
 public class Ticket
 {
     private int ticket_id;
     private int price;
-    org.example.Flight flight;
+   Flight flight;
     private boolean classVip; //indicates if this is bussiness class ticket or not
     private boolean status; //indicates status of ticket: if it is bought by someone or not
-    org.example.Passenger passenger;
+   Passenger passenger;
 
-    public Ticket(int ticket_id, int price, org.example.Flight flight, boolean classVip, org.example.Passenger passenger)
+    public Ticket(int ticket_id, int price,Flight flight, boolean classVip,Passenger passenger)
     {
         this.ticket_id=ticket_id;
         this.price = price;
@@ -52,11 +52,11 @@ public class Ticket
         }
     }
 
-    public org.example.Flight getFlight() {
+    public Flight getFlight() {
         return flight;
     }
 
-    public void setFlight(org.example.Flight flight) {
+    public void setFlight(Flight flight) {
         this.flight = flight;
     }
 
@@ -82,11 +82,11 @@ public class Ticket
         this.price *= 1.12;
     } //12% service tax
 
-    public org.example.Passenger getPassenger() {
+    public Passenger getPassenger() {
         return passenger;
     }
 
-    public void setPassenger(org.example.Passenger passenger) {
+    public void setPassenger(Passenger passenger) {
         this.passenger = passenger;
     }
 
