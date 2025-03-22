@@ -81,5 +81,14 @@ public class TicketBookingTest {
 
     }
 
+    @Test
+    @DisplayName("Validate flight associated with the ticket")
+    public void testGetFlightInTicket()
+    {
+        Flight ticketFlight = ticket1.getFlight();
+        assertNotNull(ticketFlight);
+        assertEquals("Melbourne", ticketFlight.getDepartFrom());
+        assertEquals("QUP", ticketFlight.getCode());
+    }
 
 }
