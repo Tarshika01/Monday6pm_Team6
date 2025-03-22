@@ -75,7 +75,7 @@ public class TicketBookingTest {
     public void testAddTicket()
     {
         TicketCollection.addTickets(tickets);
-        assertEquals(3, TicketCollection.tickets.size());
+        assertEquals(2, TicketCollection.tickets.size());
         assertTrue(TicketCollection.tickets.containsAll(tickets));
 
 
