@@ -33,7 +33,7 @@ public class TicketBookingTest {
 
         airplane = new Airplane(1, "Boeing 737", 12, 150, 6);
         flight1 = new Flight(
-                1, "Perth", "Melbourne", "QUP", "Quantus",
+                1, "Perth", "Melbourne", "QUP", "Qantus",
                 Timestamp.valueOf("2025-03-24 08:30:00"),
                 Timestamp.valueOf("2025-03-24 10:00:00"),
                 airplane
@@ -91,4 +91,16 @@ public class TicketBookingTest {
         assertEquals("QUP", ticketFlight.getCode());
     }
 
+    @Test
+    @DisplayName("Validate Airplane associated with the particular flight")
+    public void testFlightDetails()
+    {
+        assertEquals(1, flight1.getFlightID());
+        assertEquals("Perth", flight1.getDepartTo());
+        assertEquals("Melbourne", flight1.getDepartFrom());
+        assertEquals("QUP", flight1.getCode());
+        assertEquals("Qantas", flight1.getCompany());
+        assertNotNull(flight1.getAirplane());
+        assertEquals("Boeing 737", flight1.getAirplane().getAirplaneModel());
+    }
 }
