@@ -82,6 +82,15 @@ public class TicketBookingTest {
     }
 
     @Test
+    @DisplayName("Validate the addition of the Flights in the Flights Collection database")
+    public void testAddFlight() {
+        FlightCollection.addFlights(flights);
+        assertEquals(2, FlightCollection.flights.size());
+        assertTrue(FlightCollection.flights.containsAll(flights));
+    }
+
+
+    @Test
     @DisplayName("Validate flight associated with the ticket")
     public void testGetFlightInTicket()
     {
@@ -103,4 +112,18 @@ public class TicketBookingTest {
         assertNotNull(flight1.getAirplane());
         assertEquals("Boeing 737", flight1.getAirplane().getAirplaneModel());
     }
+
+    @Test
+    @DisplayName("Validate Airplane Getters, Setters, and toString methods")
+    public void testAirplaneMethods() {
+        assertEquals(1, airplane.getAirplaneID());
+        assertEquals("Boeing 737", airplane.getAirplaneModel());
+        assertEquals(12, airplane.getBusinessSitsNumber());
+        airplane.setBusinessSitsNumber(14);
+        assertEquals(14, airplane.getBusinessSitsNumber());
+        String airplaneStr = airplane.toString();
+        assertTrue(airplaneStr.contains("Boeing 737"));
+    }
+
+
 }
