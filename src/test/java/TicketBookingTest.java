@@ -33,7 +33,7 @@ public class TicketBookingTest {
 
         airplane = new Airplane(1, "Boeing 737", 12, 150, 6);
         flight1 = new Flight(
-                1, "Perth", "Melbourne", "QUP", "Qantus",
+                1, "Perth", "Melbourne", "QUP", "Qantas",
                 Timestamp.valueOf("2025-03-24 08:30:00"),
                 Timestamp.valueOf("2025-03-24 10:00:00"),
                 airplane
