@@ -100,6 +100,18 @@ public class TicketBookingTest {
         assertEquals("QUP", ticketFlight.getCode());
     }
 
+
+    @Test
+    @DisplayName("Validate the price of the ticket based on age and sales tax")
+    public void testPriceByAgeAndSalesTax()
+    {
+        ticket2.setPrice(ticket2.getPrice());
+        ticket1.setPrice(ticket1.getPrice());
+
+        assertEquals(504, ticket1.getPrice());
+        assertEquals(0, ticket2.getPrice());
+    }
+
     @Test
     @DisplayName("Validate Airplane associated with the particular flight")
     public void testFlightDetails()
